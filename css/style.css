@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,700,900);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  font-family: 'Inter';
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+[class*="__container"] {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.boss-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.boss-list.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.boss-list__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.boss-list__title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 120%;
+  color: #5E5E5E;
+}
+
+.boss-list__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #5E5E5E;
+}
+
+.button {
+  background: #B47AEA;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+  padding: 8px 15px;
+  margin-top: 30px;
+}
+
+.pupap-user-name {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(61, 48, 59, 0.548);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.pupap-user-name.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.pupap-user-name__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pupap-user-name__button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-top: 0px;
+}
+
+.pupap-user-name__input {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.pupap-user-name__input.active::-webkit-input-placeholder {
+  color: red;
+  text-decoration: underline;
+}
+
+.pupap-user-name__input.active:-ms-input-placeholder {
+  color: red;
+  text-decoration: underline;
+}
+
+.pupap-user-name__input.active::-ms-input-placeholder {
+  color: red;
+  text-decoration: underline;
+}
+
+.pupap-user-name__input.active::placeholder {
+  color: red;
+  text-decoration: underline;
+}
+
+.main {
+  display: none;
+}
+
+.main.active {
+  display: block;
+}
+
+.to-do {
+  padding-top: 29px;
+}
+
+.to-do__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.to-do__hi-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.to-do__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 74px;
+          flex: 0 0 74px;
+  height: 74px;
+}
+
+.to-do__icon img {
+  width: 100%;
+}
+
+.to-do__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.to-do__name-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #5E5E5E;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.to-do__title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: #5E5E5E;
+}
+
+.amount-task {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #EF6161;
+}
+
+.logout-menu {
+  background: transparent;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #B47AEA;
+}
+
+.add-task {
+  padding-top: 85px;
+  padding-bottom: 30px;
+}
+
+.add-task__new-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-task__button {
+  margin-top: 0px;
+  width: 30px;
+  height: 30px;
+  background: #B47AEA;
+  font-size: 24px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-task__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #B47AEA;
+  cursor: pointer;
+}
+
+.add-task__user-task {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.task-text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0px;
+          flex: 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.task-text.active {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.task-text__input {
+  padding-left: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.task-text__button {
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.task__basket {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  width: 30px;
+}
+
+.task__basket img {
+  width: 100%;
+}
+
+.task__checkbox {
+  height: 25px;
+  width: 25px;
+}
+
+.task__checkbox:checked + .task__text {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.task__text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.task__text .task__text-input {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.task__text button {
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-left: 5px;
+  padding: 0px 5px;
+  text-transform: uppercase;
+  background: #B47AEA;
+}
+
+.task__reload {
+  font-size: 15px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <section class="boss-list active">
+         <div class="boss-list__container">
+            <h1 class="boss-list__title">TaskDo </h1>
+            <h3 class="boss-list__subtitle">Manage You Task Checklist Easily</h3>
+            <button class="button btn-user-name">Lets Start</button>
+         </div>
+         <div class="pupap-user-name">
+            <div class="pupap-user-name__block">
+               <input type="text" placeholder="your name" class="pupap-user-name__input">
+               <button type="submit" class="pupap-user-name__button button">Yes</button>
+            </div>
+         </div>
+      </section>
+      <main class="main">
+         <section class="to-do">
+            <div class="to-do__container">
+               <div class="to-do__menu">
+                  <div class="to-do__hi-block">
+                     <div class="to-do__icon"><img src="./icons/user.png" alt="#"></div>
+                     <div class="to-do__user">
+                        <div class="to-do__name-user">
+                           <h3>Hi</h3>
+                           <div class="user-name">пупкин</div>
+                           <span>&#x1f60d</span>
+                        </div>
+                        <div class="amount-task"><span>4</span> tasks pending</div>
+                     </div>
+                  </div>
+                  <h2 class="to-do__title">TaskDo </h2>
+                  <button type="button" class="logout-menu">Logout</button>
+               </div>
+            </div>
+         </section>
+         <section class="add-task">
+            <div class="add-task__container">
+               <div class="add-task__new-task">
+                  <button type="submit" class="add-task__button button">+</button>
+                  <h2 class="add-task__title">Add New Task</h2>
+                  <div class="task-text">
+                     <input type="text" placeholder="add Task" class="task-text__input">
+                     <button type="submit" class="task-text__button button">add</button>
+                  </div>
+               </div>
+               <div class="add-task__user-task">
+                  <!-- <div class="task">
+                     <div class="task__basket"><img src="./icons/cart.png" alt="#"></div>
+                     <div class="task__reload">&#9997</div>
+                     <input type="checkbox" class="task__checkbox">
+                     <div class="task__text">Lunch</div>
+                  </div> -->
+               </div>
+            </div>
+         </section>
+      </main>
+   </div>
+   <script src="./script.js"></script>
+   <script src="./addNewTask.js"></script>
+   <script src="./rewriteTask.js"></script>
+</body>
+
+</html>
